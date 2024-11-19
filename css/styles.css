@@ -29,21 +29,24 @@ body {
 }
 
 .accordion {
-  background-color: #111;
+  width: 500px;
+  margin-inline: auto;
 }
 
 .accordion-item {
-  display: flex;
-  align-items: center;
-  padding: 16px 32px;
-  margin-bottom: 16px;
+  text-align: center;
+  margin-bottom: 32px;
+  padding-top: 16px;
   background-color: #333;
   color: aliceblue;
+  max-height: 56px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+  box-shadow: 10px 10px 10px rgb(0 0 0 / 0.2);
 }
 
-.accordion-info {
-  overflow: hidden;
-  pointer-events: none;
+.accordion-item-show {
+  max-height: 1000px;
 }
 
 .accordion-title,
@@ -52,12 +55,12 @@ body {
   pointer-events: none;
 }
 
-.accordion-text {
-  margin-top: 16px;
-  max-height: 0;
-  transition: max-height 0.5s;
+.accordion-title {
+  margin-bottom: 16px;
 }
 
-.accordion-text-show {
-  max-height: 400px;
+.accordion-text {
+  padding: 16px 32px;
+  background-color: aliceblue;
+  color: #333;
 }
